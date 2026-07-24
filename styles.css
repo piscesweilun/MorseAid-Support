@@ -259,6 +259,16 @@ h3 {
   background: var(--surface);
 }
 
+button.button {
+  font: inherit;
+  cursor: pointer;
+}
+
+button.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
 .hero-visual {
   position: relative;
   min-height: 390px;
@@ -568,6 +578,214 @@ h3 {
   margin: 0;
 }
 
+.test-notice {
+  margin: 24px 0;
+  padding: 18px 20px;
+  border: 1px solid rgba(9, 106, 113, 0.22);
+  border-radius: 16px;
+  background: rgba(8, 164, 181, 0.08);
+}
+
+.test-notice strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.test-notice p {
+  margin: 0;
+}
+
+.signal-test-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.signal-test-card {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-medium);
+  background: var(--surface);
+  box-shadow: 0 14px 42px rgba(8, 39, 61, 0.08);
+}
+
+.signal-test-heading {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 14px;
+}
+
+.signal-test-heading h3 {
+  margin-top: 2px;
+}
+
+.signal-test-heading p {
+  margin: 0;
+}
+
+.test-kind {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  padding: 5px 8px;
+  color: white;
+  border-radius: 8px;
+  background: var(--brand);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.audio-test-visual,
+.optical-test-stage {
+  height: 240px;
+  margin: 22px 0;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #061820;
+}
+
+.audio-test-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.audio-test-visual span {
+  width: 8px;
+  height: 34px;
+  border-radius: 999px;
+  background: #49c6c8;
+}
+
+.audio-test-visual span:nth-child(2),
+.audio-test-visual span:nth-child(4) {
+  height: 72px;
+}
+
+.audio-test-visual span:nth-child(3) {
+  height: 112px;
+  background: white;
+}
+
+.audio-test-visual strong {
+  margin-left: 12px;
+  color: white;
+  font-size: 1rem;
+}
+
+.audio-test-visual.is-running {
+  box-shadow: inset 0 0 0 2px rgba(73, 198, 200, 0.72);
+}
+
+.optical-test-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.optical-test-signal {
+  width: min(170px, 52vw);
+  aspect-ratio: 1;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  background: #111b20;
+  box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.72);
+}
+
+.optical-test-stage.is-on .optical-test-signal {
+  border-color: white;
+  background: white;
+  box-shadow:
+    0 0 36px rgba(255, 255, 255, 0.82),
+    0 0 86px rgba(73, 198, 200, 0.4);
+}
+
+.optical-test-label {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.test-actions,
+.dialog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.test-actions .button {
+  flex: 1 1 180px;
+}
+
+.test-status {
+  min-height: 1.65em;
+  margin: 12px 0 0;
+  color: var(--brand);
+  font-weight: 800;
+}
+
+.button-stop-all {
+  width: 100%;
+  margin-top: 18px;
+  color: white;
+  border-color: transparent;
+  background: var(--emergency);
+}
+
+.button-stop-all:hover:not(:disabled) {
+  color: white;
+  background: #b83b28;
+}
+
+.signal-test-safety {
+  margin-top: 18px;
+}
+
+.signal-test-safety h3 {
+  margin: 2px 0 8px;
+}
+
+.flash-warning-dialog {
+  width: min(calc(100% - 32px), 520px);
+  padding: 0;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--surface-strong);
+  box-shadow: var(--shadow);
+}
+
+.flash-warning-dialog::backdrop {
+  background: rgba(2, 15, 22, 0.72);
+  backdrop-filter: blur(5px);
+}
+
+.flash-warning-dialog form {
+  padding: 26px;
+}
+
+.flash-warning-dialog h2 {
+  margin: 18px 0 10px;
+  font-size: 1.7rem;
+}
+
+.flash-warning-dialog p {
+  color: var(--muted);
+}
+
+.dialog-actions {
+  justify-content: flex-end;
+  margin-top: 22px;
+}
+
 .faq-list {
   display: grid;
   gap: 12px;
@@ -686,7 +904,8 @@ h3 {
   }
 
   .card-grid,
-  .route-grid {
+  .route-grid,
+  .signal-test-grid {
     grid-template-columns: 1fr;
   }
 

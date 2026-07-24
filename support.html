@@ -69,6 +69,7 @@
           <nav class="toc lang-zh" aria-label="本頁目錄">
             <strong>本頁內容</strong>
             <a href="#start">開始使用</a>
+            <a href="#signal-test">聲光測試</a>
             <a href="#receivers">聲音與影像接收</a>
             <a href="#permissions">權限</a>
             <a href="#purchase">Pro 購買與恢復</a>
@@ -79,6 +80,7 @@
           <nav class="toc lang-en" aria-label="On this page">
             <strong>On this page</strong>
             <a href="#start">Get started</a>
+            <a href="#signal-test">Signal test</a>
             <a href="#receivers">Audio & optical receivers</a>
             <a href="#permissions">Permissions</a>
             <a href="#purchase">Pro purchase & restore</a>
@@ -107,6 +109,118 @@
                   <li>In an emergency, use official communication channels first whenever available.</li>
                 </ol>
               </div>
+            </section>
+
+            <section class="policy-section" id="signal-test">
+              <h2 class="lang-zh">聲光訊號測試</h2>
+              <h2 class="lang-en">Audio and optical signal test</h2>
+              <p class="lang-zh">
+                使用這個頁面產生標準 SOS 測試訊號，再以 MorseAid 的聲音或光線接收器辨識。測試完全在瀏覽器中執行，不會存取麥克風、相機或網路服務。
+              </p>
+              <p class="lang-en">
+                Generate a standard SOS signal on this page, then decode it with
+                MorseAid’s audio or optical receiver. The test runs entirely in
+                your browser and does not access a microphone, camera, or
+                network service.
+              </p>
+
+              <div class="test-notice">
+                <strong class="lang-zh">測試規格：SOS · 8 WPM · 650 Hz · 最長 60 秒</strong>
+                <strong class="lang-en">Test profile: SOS · 8 WPM · 650 Hz · 60-second limit</strong>
+                <p class="lang-zh">所有訊號都必須手動開始，並可隨時停止。切換分頁或離開本頁時會自動停止。</p>
+                <p class="lang-en">Every signal requires a manual start and can be stopped at any time. It stops automatically if you switch tabs or leave this page.</p>
+              </div>
+
+              <div class="signal-test-grid" data-signal-test>
+                <article class="signal-test-card">
+                  <div class="signal-test-heading">
+                    <span class="test-kind" aria-hidden="true">AUDIO</span>
+                    <div>
+                      <h3 class="lang-zh">聲音 SOS</h3>
+                      <h3 class="lang-en">Audio SOS</h3>
+                      <p class="lang-zh">將 iPhone 靠近電腦或另一台裝置的喇叭，啟動 App 的聲音接收器後再開始。</p>
+                      <p class="lang-en">Place the iPhone near this device’s speaker. Start the app’s audio receiver first, then start this test.</p>
+                    </div>
+                  </div>
+                  <div class="audio-test-visual" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <strong>650 Hz</strong>
+                  </div>
+                  <div class="test-actions">
+                    <button class="button button-primary" type="button" data-start-audio>
+                      <span class="lang-zh">開始重複聲音 SOS</span>
+                      <span class="lang-en">Start repeating audio SOS</span>
+                    </button>
+                    <button class="button button-secondary" type="button" data-stop-audio disabled>
+                      <span class="lang-zh">停止聲音</span>
+                      <span class="lang-en">Stop audio</span>
+                    </button>
+                  </div>
+                  <p class="test-status" data-audio-status role="status" aria-live="polite"></p>
+                </article>
+
+                <article class="signal-test-card">
+                  <div class="signal-test-heading">
+                    <span class="test-kind" aria-hidden="true">LIGHT</span>
+                    <div>
+                      <h3 class="lang-zh">閃光 SOS</h3>
+                      <h3 class="lang-en">Optical SOS</h3>
+                      <p class="lang-zh">將 App 光線接收器的中央偵測區對準下方圓形，校正完成後再開始。</p>
+                      <p class="lang-en">Aim the app’s center detection area at the circle below. Wait for calibration, then start the test.</p>
+                    </div>
+                  </div>
+                  <div class="optical-test-stage" data-optical-stage aria-hidden="true">
+                    <div class="optical-test-signal"></div>
+                    <span class="optical-test-label">SOS · 8 WPM</span>
+                  </div>
+                  <div class="test-actions">
+                    <button class="button button-primary" type="button" data-request-flash>
+                      <span class="lang-zh">開始重複閃光 SOS</span>
+                      <span class="lang-en">Start repeating optical SOS</span>
+                    </button>
+                    <button class="button button-secondary" type="button" data-stop-flash disabled>
+                      <span class="lang-zh">停止閃光</span>
+                      <span class="lang-en">Stop flashing</span>
+                    </button>
+                  </div>
+                  <p class="test-status" data-flash-status role="status" aria-live="polite"></p>
+                </article>
+              </div>
+
+              <button class="button button-stop-all" type="button" data-stop-all disabled>
+                <span class="lang-zh">停止所有測試</span>
+                <span class="lang-en">Stop all tests</span>
+              </button>
+
+              <div class="safety-note signal-test-safety">
+                <span class="safety-icon" aria-hidden="true">!</span>
+                <div>
+                  <h3 class="lang-zh">光敏感警告</h3>
+                  <h3 class="lang-en">Photosensitivity warning</h3>
+                  <p class="lang-zh">閃爍光線可能使光敏感使用者不適或誘發症狀。請勿直視、避免在駕駛或操作機械時使用，感到不適請立即停止。</p>
+                  <p class="lang-en">Flashing light may cause discomfort or symptoms for photosensitive users. Do not stare at it or use it while driving or operating machinery. Stop immediately if you feel unwell.</p>
+                </div>
+              </div>
+
+              <dialog class="flash-warning-dialog" data-flash-dialog>
+                <form method="dialog">
+                  <span class="safety-icon" aria-hidden="true">!</span>
+                  <h2 class="lang-zh">開始閃光測試？</h2>
+                  <h2 class="lang-en">Start the flashing-light test?</h2>
+                  <p class="lang-zh">接下來會以 8 WPM 重複閃爍 SOS，最長 60 秒。光敏感使用者請勿啟動。</p>
+                  <p class="lang-en">The circle will flash a repeating SOS at 8 WPM for up to 60 seconds. Do not start if you are photosensitive.</p>
+                  <div class="dialog-actions">
+                    <button class="button button-secondary" value="cancel" type="submit">
+                      <span class="lang-zh">取消</span>
+                      <span class="lang-en">Cancel</span>
+                    </button>
+                    <button class="button button-primary" value="confirm" type="submit" data-confirm-flash>
+                      <span class="lang-zh">我瞭解，開始測試</span>
+                      <span class="lang-en">I understand, start test</span>
+                    </button>
+                  </div>
+                </form>
+              </dialog>
             </section>
 
             <section class="policy-section" id="receivers">
