@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="MorseAid 災訊支援中心：操作、權限、購買恢復與故障排除。MorseAid support, permissions, purchases, restore, and troubleshooting."
+    />
+    <meta name="theme-color" content="#08273d" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'"
+    />
+    <title>MorseAid 災訊｜支援中心</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body data-lang="zh">
+    <a class="skip-link lang-zh" href="#main">跳至主要內容</a>
+    <a class="skip-link lang-en" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand-link" href="index.html" aria-label="MorseAid home">
+          <span class="signal-mark" aria-hidden="true">
+            <svg viewBox="0 0 68 48" fill="none">
+              <path d="M2 28h10c6 0 6-18 12-18s6 30 12 30" stroke="#13afbd" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="45" cy="26" r="4.5" fill="white" />
+              <path d="M55 26h11" stroke="white" stroke-width="7" stroke-linecap="round" />
+            </svg>
+          </span>
+          <span>MorseAid 災訊</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a class="lang-zh" href="support.html" aria-current="page">支援</a>
+          <a class="lang-en" href="support.html" aria-current="page">Support</a>
+          <a class="lang-zh" href="privacy.html">隱私</a>
+          <a class="lang-en" href="privacy.html">Privacy</a>
+        </nav>
+        <div class="language-toggle" aria-label="Language">
+          <button type="button" data-language="zh" aria-pressed="true">繁中</button>
+          <button type="button" data-language="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="shell">
+          <p class="eyebrow lang-zh">MorseAid 支援</p>
+          <p class="eyebrow lang-en">MorseAid support</p>
+          <h1 class="lang-zh">讓每個訊號都更清楚</h1>
+          <h1 class="lang-en">Make every signal clearer</h1>
+          <p class="lede lang-zh">
+            從首次設定、聲光接收，到 MorseAid Pro 購買與恢復，這裡整理了常見問題與安全的故障排除步驟。
+          </p>
+          <p class="lede lang-en">
+            Find safe troubleshooting steps for first-time setup, audio and
+            optical reception, permissions, and MorseAid Pro purchases.
+          </p>
+          <p class="meta-line lang-zh">適用版本：MorseAid 1.0 · 最後更新：2026 年 7 月 24 日</p>
+          <p class="meta-line lang-en">Applies to MorseAid 1.0 · Last updated July 24, 2026</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell content-layout">
+          <nav class="toc lang-zh" aria-label="本頁目錄">
+            <strong>本頁內容</strong>
+            <a href="#start">開始使用</a>
+            <a href="#receivers">聲音與影像接收</a>
+            <a href="#permissions">權限</a>
+            <a href="#purchase">Pro 購買與恢復</a>
+            <a href="#data">本機資料</a>
+            <a href="#faq">常見問題</a>
+            <a href="#contact">聯絡支援</a>
+          </nav>
+          <nav class="toc lang-en" aria-label="On this page">
+            <strong>On this page</strong>
+            <a href="#start">Get started</a>
+            <a href="#receivers">Audio & optical receivers</a>
+            <a href="#permissions">Permissions</a>
+            <a href="#purchase">Pro purchase & restore</a>
+            <a href="#data">Local data</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact support</a>
+          </nav>
+
+          <div class="content-stack">
+            <section class="policy-section" id="start">
+              <h2 class="lang-zh">開始使用</h2>
+              <h2 class="lang-en">Get started</h2>
+              <div class="lang-zh">
+                <ol>
+                  <li>首次開啟時，先閱讀安全說明。App 不會自動啟動感測器或發送訊號。</li>
+                  <li>從首頁選擇 SOS、接收器、求救資料卡或訓練。</li>
+                  <li>發送前確認輸出方式、摩斯內容、速度與時間上限。</li>
+                  <li>緊急狀況下，有正式通訊管道時請優先使用。</li>
+                </ol>
+              </div>
+              <div class="lang-en">
+                <ol>
+                  <li>Read the safety notice on first launch. The app never starts sensors or a transmission automatically.</li>
+                  <li>Choose SOS, Receivers, Emergency Card, or Training from the home screen.</li>
+                  <li>Before transmitting, confirm the output, Morse content, speed, and time limit.</li>
+                  <li>In an emergency, use official communication channels first whenever available.</li>
+                </ol>
+              </div>
+            </section>
+
+            <section class="policy-section" id="receivers">
+              <h2 class="lang-zh">改善聲音與影像接收</h2>
+              <h2 class="lang-en">Improve audio and optical reception</h2>
+              <div class="fact-list">
+                <article class="fact">
+                  <strong class="lang-zh">聲音接收</strong>
+                  <strong class="lang-en">Audio receiver</strong>
+                  <p class="lang-zh">靠近穩定且清楚的音源，避開語音、音樂、風聲與回音。先在安靜環境校準，再逐步調整門檻。</p>
+                  <p class="lang-en">Move near a stable tone and away from speech, music, wind, and echo. Calibrate in a quiet place before adjusting thresholds.</p>
+                </article>
+                <article class="fact">
+                  <strong class="lang-zh">影像接收</strong>
+                  <strong class="lang-en">Optical receiver</strong>
+                  <p class="lang-zh">讓訊號光源保持在中央偵測區，固定手機，避免自動曝光變化、反光與其他閃爍光源。</p>
+                  <p class="lang-en">Keep the light inside the center detection area, steady the phone, and avoid reflections, exposure shifts, or competing flicker.</p>
+                </article>
+              </div>
+              <p class="lang-zh">辨識結果僅供輔助。請比對原始點劃節奏，採取行動前務必人工確認。</p>
+              <p class="lang-en">Recognition is assistive only. Compare the raw dot-dash rhythm and confirm it manually before acting.</p>
+            </section>
+
+            <section class="policy-section" id="permissions">
+              <h2 class="lang-zh">權限用途</h2>
+              <h2 class="lang-en">Permission use</h2>
+              <div class="faq-list">
+                <article class="faq-item">
+                  <h3 class="lang-zh">麥克風</h3>
+                  <h3 class="lang-en">Microphone</h3>
+                  <p class="lang-zh">只在你啟動聲音接收器時使用。音訊在記憶體中即時分析，不錄製、不保存、也不上傳。</p>
+                  <p class="lang-en">Used only after you start the audio receiver. Audio is analyzed in memory and is not recorded, saved, or uploaded.</p>
+                </article>
+                <article class="faq-item">
+                  <h3 class="lang-zh">相機</h3>
+                  <h3 class="lang-en">Camera</h3>
+                  <p class="lang-zh">只在你啟動影像接收器時使用。畫面會轉換為中央區域亮度樣本；不拍照、不錄影、也不上傳。</p>
+                  <p class="lang-en">Used only after you start the optical receiver. Frames become center-region brightness samples; no photo or video is saved or uploaded.</p>
+                </article>
+                <article class="faq-item">
+                  <h3 class="lang-zh">使用 App 期間的位置</h3>
+                  <h3 class="lang-en">Location while using the app</h3>
+                  <p class="lang-zh">只有你在求救資料卡按下位置按鈕後才會要求。MorseAid 不會要求「永遠允許」，也不會在背景追蹤位置。</p>
+                  <p class="lang-en">Requested only after you tap the location button on the emergency card. MorseAid never asks for Always access or tracks location in the background.</p>
+                </article>
+              </div>
+              <p class="lang-zh">若要變更權限，請前往 iPhone「設定」→「隱私權與安全性」，或「設定」→「MorseAid」。</p>
+              <p class="lang-en">To change access, open iPhone Settings → Privacy & Security, or Settings → MorseAid.</p>
+            </section>
+
+            <section class="policy-section" id="purchase">
+              <h2 class="lang-zh">MorseAid Pro 購買與恢復</h2>
+              <h2 class="lang-en">MorseAid Pro purchase and restore</h2>
+              <div class="lang-zh">
+                <ul>
+                  <li>MorseAid Pro 是一次買斷的非消耗型 App 內購買，不是訂閱。</li>
+                  <li>前往 App 內「設定」→「MorseAid Pro」購買或使用「恢復購買」。</li>
+                  <li>實際價格由 App Store 依你的地區顯示；台灣參照售價為 NT$290。</li>
+                  <li>購買可透過 Apple 家人共享提供給家庭群組成員。</li>
+                  <li>若付款完成後仍未解鎖，先確認 App Store 帳號，再按「恢復購買」並重新開啟 App。</li>
+                </ul>
+              </div>
+              <div class="lang-en">
+                <ul>
+                  <li>MorseAid Pro is a one-time, non-consumable in-app purchase, not a subscription.</li>
+                  <li>Open Settings → MorseAid Pro in the app to buy or choose Restore Purchases.</li>
+                  <li>The App Store displays your localized price; the Taiwan reference price is NT$290.</li>
+                  <li>Apple Family Sharing is enabled for this purchase.</li>
+                  <li>If access is still locked after payment, verify the App Store account, tap Restore Purchases, and relaunch the app.</li>
+                </ul>
+              </div>
+              <p class="lang-zh">付款、退款、交易紀錄與帳務由 Apple 處理。退款請使用 Apple 的「回報問題」服務。</p>
+              <p class="lang-en">Apple handles payment, refunds, transaction records, and billing. Use Apple’s Report a Problem service for refund requests.</p>
+            </section>
+
+            <section class="policy-section" id="data">
+              <h2 class="lang-zh">管理與刪除本機資料</h2>
+              <h2 class="lang-en">Manage and delete local data</h2>
+              <p class="lang-zh">
+                求救資料卡、訓練進度、訊息模板、偏好設定與訊號歷史都儲存在 App 的本機容器。你可以在 App 內刪除個別或全部訊號歷史；刪除 App 會移除 App 管理的本機資料。
+              </p>
+              <p class="lang-en">
+                Emergency-card fields, training progress, message templates,
+                preferences, and signal history stay in the app’s local
+                container. Delete individual or all history in the app; deleting
+                the app removes its app-managed local data.
+              </p>
+              <p>
+                <a class="lang-zh" href="privacy.html">閱讀完整隱私權政策 →</a>
+                <a class="lang-en" href="privacy.html">Read the full privacy policy →</a>
+              </p>
+            </section>
+
+            <section class="policy-section" id="faq">
+              <h2 class="lang-zh">常見問題</h2>
+              <h2 class="lang-en">Frequently asked questions</h2>
+              <div class="faq-list">
+                <article class="faq-item">
+                  <h3 class="lang-zh">MorseAid 會自動呼叫救援嗎？</h3>
+                  <h3 class="lang-en">Does MorseAid call emergency services?</h3>
+                  <p class="lang-zh">不會。App 不會撥號、傳送網路求救或通知任何單位。發出 SOS 不代表救援單位已收到。</p>
+                  <p class="lang-en">No. It does not call, send an online alert, or notify responders. Sending SOS does not mean anyone received it.</p>
+                </article>
+                <article class="faq-item">
+                  <h3 class="lang-zh">沒有網路還能使用嗎？</h3>
+                  <h3 class="lang-en">Can I use it without internet?</h3>
+                  <p class="lang-zh">免費核心可離線使用。購買、恢復購買及首次取得 App Store 商品資訊需要 Apple 服務。</p>
+                  <p class="lang-en">The free core works offline. Buying, restoring, and initially loading App Store product information require Apple services.</p>
+                </article>
+                <article class="faq-item">
+                  <h3 class="lang-zh">為什麼相機或麥克風無法啟動？</h3>
+                  <h3 class="lang-en">Why will the camera or microphone not start?</h3>
+                  <p class="lang-zh">檢查 iPhone 設定中的權限，確認沒有其他 App 正在使用感測器，完全關閉 MorseAid 後再開啟。仍無法使用時請回報裝置型號與 iOS 版本。</p>
+                  <p class="lang-en">Check permissions, make sure another app is not holding the sensor, and relaunch MorseAid. If it persists, report the device model and iOS version.</p>
+                </article>
+                <article class="faq-item">
+                  <h3 class="lang-zh">QR Code 內容有加密嗎？</h3>
+                  <h3 class="lang-en">Is the emergency-card QR code encrypted?</h3>
+                  <p class="lang-zh">沒有。任何能看到 QR Code 的相機都可能讀取內容。選填醫療欄位預設排除，展示前請再次檢查。</p>
+                  <p class="lang-en">No. Any camera that can see the code may read it. Optional medical fields are excluded by default; review the card before presenting it.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="policy-section" id="contact">
+              <div class="contact-panel">
+                <h2 class="lang-zh">仍需要協助？</h2>
+                <h2 class="lang-en">Still need help?</h2>
+                <p class="lang-zh">
+                  請在 GitHub 支援追蹤器建立問題，並附上 MorseAid 版本、iPhone 型號、iOS 版本、重現步驟與畫面訊息。請勿公開姓名、位置、醫療資料、Apple ID 或交易憑證。
+                </p>
+                <p class="lang-en">
+                  Open a ticket in the GitHub support tracker with the MorseAid
+                  version, iPhone model, iOS version, reproduction steps, and
+                  visible error. Do not post names, location, medical details,
+                  Apple ID information, or purchase receipts.
+                </p>
+                <div class="hero-actions">
+                  <a
+                    class="button button-primary lang-zh"
+                    href="https://github.com/piscesweilun-home/MorseAid-Support/issues/new?template=support.yml"
+                  >建立支援問題</a>
+                  <a
+                    class="button button-primary lang-en"
+                    href="https://github.com/piscesweilun-home/MorseAid-Support/issues/new?template=support.yml"
+                  >Open a support ticket</a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-shell">
+        <span>© <span data-year>2026</span> Pisces Studio · MorseAid</span>
+        <nav aria-label="Footer">
+          <a href="index.html">MorseAid</a>
+          <a class="lang-zh" href="privacy.html">隱私權政策</a>
+          <a class="lang-en" href="privacy.html">Privacy</a>
+          <a href="https://github.com/piscesweilun-home/MorseAid-Support">GitHub</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
