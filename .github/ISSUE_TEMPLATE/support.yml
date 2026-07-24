@@ -1,0 +1,58 @@
+name: MorseAid 支援 / Support
+description: 回報操作、購買或隱私問題 / Report product, purchase, or privacy issues
+title: "[Support] "
+labels:
+  - support
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感謝你協助改善 MorseAid。請勿張貼姓名、位置、醫療資料、Apple ID、付款資料或交易憑證。
+
+        Thank you for helping improve MorseAid. Do not post names, location, medical details, Apple ID information, payment data, or purchase receipts.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 問題類型 / Category
+      options:
+        - App 操作 / App usage
+        - 聲音接收 / Audio receiver
+        - 影像接收 / Optical receiver
+        - 購買或恢復 / Purchase or restore
+        - 隱私 / Privacy
+        - 其他 / Other
+    validations:
+      required: true
+
+  - type: input
+    id: app-version
+    attributes:
+      label: MorseAid 版本 / Version
+      placeholder: "例如 / Example: 1.0.0 (1)"
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: 裝置與 iOS / Device and iOS
+      placeholder: "例如 / Example: iPhone 16, iOS 18.5"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 問題說明 / Description
+      description: 請描述預期結果、實際結果與重現步驟 / Describe expected behavior, actual behavior, and reproduction steps
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隱私確認 / Privacy confirmation
+      options:
+        - label: 我確認內容不含敏感個人或付款資料 / I confirm this report contains no sensitive personal or payment data
+          required: true
