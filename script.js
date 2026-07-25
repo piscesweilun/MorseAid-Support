@@ -9,12 +9,12 @@
   const messages = {
     zh: {
       ready: "準備就緒，等待手動開始。",
-      audioRunning: "正在重複播放聲音 SOS，最長 60 秒。",
+      audioRunning: "正在重複播放聲音 {message}，最長 60 秒。",
       audioStopped: "聲音測試已停止。",
       audioComplete: "聲音測試已在 60 秒後自動停止。",
       audioUnavailable: "此瀏覽器不支援 Web Audio，請改用最新版 Safari、Chrome 或 Edge。",
       audioError: "無法啟動聲音。請確認裝置未靜音，並再試一次。",
-      flashRunning: "正在重複顯示閃光 SOS，最長 60 秒。",
+      flashRunning: "正在重複顯示閃光 {message}，最長 60 秒。",
       flashStopped: "閃光測試已停止。",
       flashComplete: "閃光測試已在 60 秒後自動停止。",
       flashWarning:
@@ -22,14 +22,14 @@
     },
     en: {
       ready: "Ready. Every test requires a manual start.",
-      audioRunning: "Repeating audio SOS for up to 60 seconds.",
+      audioRunning: "Repeating audio {message} for up to 60 seconds.",
       audioStopped: "Audio test stopped.",
       audioComplete: "Audio test stopped automatically after 60 seconds.",
       audioUnavailable:
         "Web Audio is not supported here. Use a current version of Safari, Chrome, or Edge.",
       audioError:
         "Audio could not start. Check that the device is not muted, then try again.",
-      flashRunning: "Repeating optical SOS for up to 60 seconds.",
+      flashRunning: "Repeating optical {message} for up to 60 seconds.",
       flashStopped: "Flashing-light test stopped.",
       flashComplete:
         "Flashing-light test stopped automatically after 60 seconds.",
@@ -43,7 +43,10 @@
   let flashStatusKey = "ready";
 
   function translated(key) {
-    return messages[currentLanguage][key];
+    return messages[currentLanguage][key].replace(
+      "{message}",
+      selectedMessage,
+    );
   }
 
   function refreshStatuses() {
@@ -87,12 +90,37 @@
   const DOT_SECONDS = DOT_MILLISECONDS / 1000;
   const TEST_LIMIT_MILLISECONDS = 60_000;
   const TEST_LIMIT_SECONDS = TEST_LIMIT_MILLISECONDS / 1000;
-  const SOS_SIGNALS = [1, 1, 1, 3, 3, 3, 1, 1, 1];
-  const SOS_EVENTS = SOS_SIGNALS.flatMap((units, index) => [
-    { isOn: true, units },
-    { isOn: false, units: index === SOS_SIGNALS.length - 1 ? 7 : 1 },
-  ]);
+  const MORSE = {
+    A: ".-",
+    E: ".",
+    F: "..-.",
+    H: "....",
+    L: ".-..",
+    O: "---",
+    P: ".--.",
+    S: "...",
+    T: "-",
+  };
 
+  function buildSignalEvents(message) {
+    const events = [];
+    [...message].forEach((character, characterIndex) => {
+      const symbols = [...MORSE[character]];
+      symbols.forEach((symbol, symbolIndex) => {
+        events.push({ isOn: true, units: symbol === "." ? 1 : 3 });
+        if (symbolIndex < symbols.length - 1) {
+          events.push({ isOn: false, units: 1 });
+        }
+      });
+      events.push({
+        isOn: false,
+        units: characterIndex === message.length - 1 ? 7 : 3,
+      });
+    });
+    return events;
+  }
+
+  const messageSelect = document.querySelector("[data-signal-message]");
   const startAudioButton = document.querySelector("[data-start-audio]");
   const stopAudioButton = document.querySelector("[data-stop-audio]");
   const requestFlashButton = document.querySelector("[data-request-flash]");
@@ -102,6 +130,8 @@
   const opticalStage = document.querySelector("[data-optical-stage]");
   const flashDialog = document.querySelector("[data-flash-dialog]");
 
+  let selectedMessage = messageSelect.value;
+  let signalEvents = buildSignalEvents(selectedMessage);
   let audioSession = null;
   let flashRunToken = 0;
   let flashRunning = false;
@@ -113,7 +143,19 @@
     requestFlashButton.disabled = flashRunning;
     stopFlashButton.disabled = !flashRunning;
     stopAllButton.disabled = !audioRunning && !flashRunning;
+    messageSelect.disabled = audioRunning || flashRunning;
     audioVisual.classList.toggle("is-running", audioRunning);
+  }
+
+  function refreshSelectedMessage() {
+    document.querySelectorAll("[data-selected-message]").forEach((element) => {
+      element.textContent = selectedMessage;
+    });
+    document.querySelector("[data-morse-preview]").textContent = [
+      ...selectedMessage,
+    ]
+      .map((character) => MORSE[character])
+      .join(" ");
   }
 
   function setAudioStatus(key) {
@@ -181,7 +223,7 @@
       let cursor = startTime;
 
       while (cursor < deadline) {
-        for (const event of SOS_EVENTS) {
+        for (const event of signalEvents) {
           if (cursor >= deadline) break;
           const eventEnd = Math.min(
             cursor + event.units * DOT_SECONDS,
@@ -246,7 +288,7 @@
     updateTestControls();
 
     while (flashRunning && token === flashRunToken && cursor < deadline) {
-      for (const event of SOS_EVENTS) {
+      for (const event of signalEvents) {
         if (!flashRunning || token !== flashRunToken || cursor >= deadline) {
           break;
         }
@@ -280,6 +322,15 @@
     stopFlash();
   }
 
+  messageSelect.addEventListener("change", () => {
+    stopAllTests();
+    selectedMessage = messageSelect.value;
+    signalEvents = buildSignalEvents(selectedMessage);
+    audioStatusKey = "ready";
+    flashStatusKey = "ready";
+    refreshSelectedMessage();
+    refreshStatuses();
+  });
   startAudioButton.addEventListener("click", startAudio);
   stopAudioButton.addEventListener("click", () => stopAudio());
   requestFlashButton.addEventListener("click", requestFlashStart);
@@ -296,6 +347,7 @@
   });
   window.addEventListener("pagehide", stopAllTests);
 
+  refreshSelectedMessage();
   updateTestControls();
   setLanguage(preferredLanguage);
 })();
