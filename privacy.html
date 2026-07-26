@@ -60,8 +60,8 @@
             cloud sync, or a developer server. This policy explains how the app
             and this support website handle data.
           </p>
-          <p class="meta-line lang-zh">生效日期：2026 年 7 月 24 日 · 適用版本：MorseAid 1.0</p>
-          <p class="meta-line lang-en">Effective July 24, 2026 · Applies to MorseAid 1.0</p>
+          <p class="meta-line lang-zh">生效日期：2026 年 7 月 26 日 · 適用版本：MorseAid 1.0</p>
+          <p class="meta-line lang-en">Effective July 26, 2026 · Applies to MorseAid 1.0</p>
         </div>
       </section>
 
@@ -132,7 +132,7 @@
                 <ul>
                   <li>麥克風只在你明確啟動聲音摩斯接收器後使用。</li>
                   <li>音訊樣本暫存於記憶體，用於本機訊號分類；原始音訊不會寫入檔案或上傳。</li>
-                  <li>相機只在你明確啟動影像摩斯接收器後使用。</li>
+                  <li>相機只在你明確啟動影像摩斯接收器或 QR 掃描器後使用。</li>
                   <li>相機畫面會在記憶體中縮減為中央偵測區的亮度樣本；照片與影片不會保存或上傳。</li>
                   <li>App 進入背景時會停止進行中的感測器工作。</li>
                 </ul>
@@ -141,7 +141,7 @@
                 <ul>
                   <li>The microphone is used only after you explicitly start the audio Morse receiver.</li>
                   <li>Audio samples are held temporarily in memory for local signal classification. Raw audio is not written to files or uploaded.</li>
-                  <li>The camera is used only after you explicitly start the optical Morse receiver.</li>
+                  <li>The camera is used only after you explicitly start the optical Morse receiver or a QR scanner.</li>
                   <li>Frames are reduced in memory to center-region brightness samples. Photos and video are not saved or uploaded.</li>
                   <li>Active sensor work stops when the app moves to the background.</li>
                 </ul>
@@ -152,21 +152,21 @@
               <h2 class="lang-zh">位置資料</h2>
               <h2 class="lang-en">Location data</h2>
               <p class="lang-zh">
-                只有在你按下求救資料卡中的位置按鈕後，MorseAid 才會要求「使用 App 期間」的位置權限。App 不要求「永遠允許」，也不執行背景位置追蹤。
+                只有在你按下求救資料卡或家庭安全站中的位置按鈕後，MorseAid 才會要求「使用 App 期間」的位置權限。App 不要求「永遠允許」，也不執行背景位置追蹤。
               </p>
               <p class="lang-en">
                 MorseAid requests When In Use location only after you tap the
-                location button on the emergency card. It never requests Always
+                location button on the emergency card or Family Safety Station. It never requests Always
                 access and does not track location in the background.
               </p>
               <p class="lang-zh">
-                加入求救資料卡的位置包含座標、取得時間與水平準確度，並儲存在 App 本機容器。App 不會自動傳輸或廣播這些資料。
+                加入求救資料卡或家庭現況的位置包含座標、取得時間與水平準確度，並儲存在 App 本機容器。家庭現況的位置選項每次預設關閉；App 不會自動傳輸或廣播這些資料。
               </p>
               <p class="lang-en">
-                A location added to an emergency card contains coordinates,
+                A location added to an emergency card or family status contains coordinates,
                 acquisition time, and horizontal accuracy and is stored in the
-                app’s local container. The app does not transmit or broadcast it
-                automatically.
+                app’s local container. Family-status location resets to off for
+                each update. The app does not transmit or broadcast it automatically.
               </p>
             </section>
 
@@ -200,6 +200,16 @@
                 remains local in both Free and Pro; Pro unlocks complete viewing,
                 search, replay, export, and deletion tools.
               </p>
+              <p class="lang-zh">
+                家庭名稱、成員、現況、草稿、交接狀態及防重播標記保存在本機 SwiftData。裝置私鑰與家庭群組金鑰使用 iOS Keychain 的「僅限本裝置、解鎖時可用」保護，不會寫入 QR Code、紀錄或一般資料庫。
+              </p>
+              <p class="lang-en">
+                Family names, members, statuses, drafts, handoff states, and
+                replay markers are stored in local SwiftData. Device private
+                keys and family group keys use iOS Keychain protection limited
+                to this device while unlocked; they are not written to QR
+                codes, logs, or the ordinary database.
+              </p>
             </section>
 
             <section class="policy-section" id="sharing">
@@ -210,6 +220,8 @@
                   <li>求救資料卡 QR Code 在裝置端產生，不會傳給開發者，但未經加密。任何能看到 QR Code 的相機都可能讀取內容。</li>
                   <li>選填醫療欄位預設排除；每次展示資料卡時必須由你主動加入。</li>
                   <li>Pro 的 CSV 匯出由你啟動。選擇分享目標後，資料處理受該 App 或服務的隱私政策約束。</li>
+                  <li>家庭交接 QR Code 經簽章及加密；結構化位置只存在加密內容中，不會印在 QR 旁。人類可讀摘要會顯示姓名、現況、時間、人數及你輸入的留言。</li>
+                  <li>系統分享只在你按下後開啟，目的地由你選擇。取消分享不改變狀態；完成只表示 iOS 接受分享要求，不代表家人收到。</li>
                   <li>發送聲音、螢幕或手電筒訊號會讓附近的人或裝置接收到你選擇的摩斯內容。</li>
                 </ul>
               </div>
@@ -218,6 +230,8 @@
                   <li>Emergency-card QR codes are generated on device and are not sent to the developer, but they are not encrypted. Any camera that sees the code may read it.</li>
                   <li>Optional medical fields are excluded by default and must be deliberately included each time the card is presented.</li>
                   <li>Pro CSV export starts only when you request it. After you choose a share destination, that app or service’s privacy policy applies.</li>
+                  <li>Family handoff QR codes are signed and encrypted. Structured location remains inside the encrypted payload and is not printed beside the QR. The readable summary shows the name, status, time, people count, and note you entered.</li>
+                  <li>The system share sheet opens only when you request it, and you choose the destination. Cancelling does not change message state; completion means only that iOS accepted the request, not that family received it.</li>
                   <li>Sound, screen, or flashlight transmission makes your selected Morse content observable to nearby people or devices.</li>
                 </ul>
               </div>
