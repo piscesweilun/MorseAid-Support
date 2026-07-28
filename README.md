@@ -1,6 +1,6 @@
 # MorseAid Support
 
-MorseAid 災訊的官方支援與隱私網站。本目錄是公開網站的本地原始碼，對外發布至：
+MorseAid 摩斯安訊的官方支援與隱私網站。本目錄是公開網站的本地原始碼，對外發布至：
 
 - 儲存庫：https://github.com/piscesweilun/MorseAid-Support
 - 首頁：https://piscesweilun.github.io/MorseAid-Support/

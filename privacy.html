@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="MorseAid 災訊隱私權政策。Privacy policy for MorseAid: Offline Signals."
+      content="MorseAid 摩斯安訊隱私權政策。Privacy policy for MorseAid: Offline Signals."
     />
     <meta name="theme-color" content="#08273d" />
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'"
     />
-    <title>MorseAid 災訊｜隱私權政策</title>
+    <title>MorseAid 摩斯安訊｜隱私權政策</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
@@ -30,7 +30,7 @@
               <path d="M55 26h11" stroke="white" stroke-width="7" stroke-linecap="round" />
             </svg>
           </span>
-          <span>MorseAid 災訊</span>
+          <span>MorseAid 摩斯安訊</span>
         </a>
         <nav class="site-nav" aria-label="Primary">
           <a class="lang-zh" href="support.html">支援</a>
@@ -60,8 +60,8 @@
             cloud sync, or a developer server. This policy explains how the app
             and this support website handle data.
           </p>
-          <p class="meta-line lang-zh">生效日期：2026 年 7 月 26 日 · 適用版本：MorseAid 1.0</p>
-          <p class="meta-line lang-en">Effective July 26, 2026 · Applies to MorseAid 1.0</p>
+          <p class="meta-line lang-zh">生效日期：2026 年 7 月 28 日 · 適用版本：MorseAid 1.0</p>
+          <p class="meta-line lang-en">Effective July 28, 2026 · Applies to MorseAid 1.0</p>
         </div>
       </section>
 
@@ -223,7 +223,7 @@
                   <li>家庭交接 QR Code 經簽章及加密；結構化位置只存在加密內容中，不會印在 QR 旁。人類可讀摘要會顯示姓名、現況、時間、人數及你輸入的留言。</li>
                   <li>簡訊版現況卡是由你要求產生的未加密純文字。精確座標預設排除；若你手動加入並選擇簡訊或分享目的地，資料處理由電信商、收件人及該目的地的政策規範。MorseAid 不保存收件人或簡訊傳送結果。</li>
                   <li>系統分享只在你按下後開啟，目的地由你選擇。取消分享不改變狀態；完成只表示 iOS 接受分享要求，不代表家人收到。</li>
-                  <li>附近家庭傳送只在你主動開始且 App 位於前景時使用本機網路。探索廣告不含家庭名稱、姓名、現況或位置；雙方驗證為同一個已配對家庭後，才交換加密封包。</li>
+                  <li>附近家庭傳送只在你主動開始且 App 位於前景時使用藍牙與本機網路。探索廣告不含家庭名稱、姓名、現況或位置；雙方驗證為同一個已配對家庭後，才交換加密封包。</li>
                   <li>發送聲音、螢幕或手電筒訊號會讓附近的人或裝置接收到你選擇的摩斯內容。</li>
                 </ul>
               </div>
@@ -235,7 +235,7 @@
                   <li>Family handoff QR codes are signed and encrypted. Structured location remains inside the encrypted payload and is not printed beside the QR. The readable summary shows the name, status, time, people count, and note you entered.</li>
                   <li>An SMS status card is unencrypted plain text generated only when you request it. Precise coordinates are excluded by default. If you include them and choose SMS or a share destination, the carrier, recipient, and destination policies govern that data. MorseAid does not store recipients or SMS results.</li>
                   <li>The system share sheet opens only when you request it, and you choose the destination. Cancelling does not change message state; completion means only that iOS accepted the request, not that family received it.</li>
-                  <li>Nearby Family Transfer uses the local network only after you start it and while the app is in the foreground. Discovery advertisements contain no family name, member name, status, or location. Encrypted packets are exchanged only after both devices verify the same paired family.</li>
+                  <li>Nearby Family Transfer uses Bluetooth and the local network only after you start it and while the app is in the foreground. Discovery advertisements contain no family name, member name, status, or location. Encrypted packets are exchanged only after both devices verify the same paired family.</li>
                   <li>Sound, screen, or flashlight transmission makes your selected Morse content observable to nearby people or devices.</li>
                 </ul>
               </div>
@@ -286,13 +286,16 @@
               <h2 class="lang-zh">資料保留、刪除與安全</h2>
               <h2 class="lang-en">Retention, deletion, and security</h2>
               <p class="lang-zh">
-                本機資料會保留到你在 App 內刪除、清除全部訊號歷史，或刪除 App 為止。因為 MorseAid 不將這些資料傳給開發者，開發者沒有可代為搜尋、匯出或刪除的伺服器帳戶資料。
+                App 容器中的本機資料會保留到你在 App 內刪除、清除全部訊號歷史，或刪除 App 為止。iOS Keychain 中的裝置私鑰或配對金鑰可能不會隨 App 一併刪除；若要先撤銷配對，請在成員列向左滑動並移除成員後再刪除 App。因為 MorseAid 不將這些資料傳給開發者，開發者沒有可代為搜尋、匯出或刪除的伺服器帳戶資料。
               </p>
               <p class="lang-en">
-                Local data remains until you delete it in the app, clear all
-                signal history, or delete the app. Because MorseAid does not send
-                this data to the developer, there is no developer server account
-                data to search, export, or delete on your behalf.
+                Data in the app container remains until you delete it in the
+                app, clear all signal history, or delete the app. Device private
+                keys or pairing keys in iOS Keychain may remain after deletion.
+                To revoke a pairing first, swipe left on the member, remove it,
+                and then delete the app. Because MorseAid does not send this data
+                to the developer, there is no developer server account data to
+                search, export, or delete on your behalf.
               </p>
               <p class="lang-zh">
                 本機資料受 iOS 與裝置安全機制保護，但 QR Code、畫面展示、聲光發送或你主動匯出的內容會離開 App 的控制範圍。分享前請移除不必要的個人或醫療資訊。
