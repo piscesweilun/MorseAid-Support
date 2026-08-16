@@ -14,7 +14,7 @@
     />
     <title>MorseAid 摩斯安訊｜支援中心</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260728-4" />
+    <link rel="stylesheet" href="styles.css?v=20260816-1" />
     <script src="script.js" defer></script>
   </head>
   <body data-lang="zh">
@@ -41,6 +41,7 @@
         <div class="language-toggle" aria-label="Language">
           <button type="button" data-language="zh" aria-pressed="true">繁中</button>
           <button type="button" data-language="en" aria-pressed="false">EN</button>
+          <a href="support-ja.html" lang="ja">日本語</a>
         </div>
       </div>
     </header>
@@ -60,8 +61,8 @@
             beginner lessons, audio and optical reception, and safe
             troubleshooting.
           </p>
-          <p class="meta-line lang-zh">適用版本：MorseAid 1.0（iPhone 與 iPad）· 最後更新：2026 年 7 月 28 日</p>
-          <p class="meta-line lang-en">Applies to MorseAid 1.0 on iPhone and iPad · Last updated July 28, 2026</p>
+          <p class="meta-line lang-zh">適用版本：MorseAid 1.1.0（iPhone 與 iPad）· 最後更新：2026 年 8 月 16 日</p>
+          <p class="meta-line lang-en">Applies to MorseAid 1.1.0 on iPhone and iPad · Last updated August 16, 2026</p>
         </div>
       </section>
 
@@ -385,9 +386,9 @@
                   <li>記錄現況後，訊息會先進入本機待送匣；這不代表家人已收到。</li>
                   <li>選擇「以 QR 或系統分享交接」可顯示大字摘要及加密 QR，或由你選擇「訊息」、AirDrop 等系統目的地。</li>
                   <li>收件家人可掃描 QR，或貼上分享訊息內的 MORSEAID1 加密碼。App 會驗證家庭、成員、簽章、期限與重播。</li>
-                  <li>兩部裝置都保持 App 在前景，按下「開始家庭通訊」或「尋找附近家庭裝置」，可在沒有網際網路時透過附近 Wi‑Fi 或純藍牙嘗試交換加密現況。</li>
-                  <li>只有接收裝置完成驗證、儲存並回傳加密回條後，原裝置才顯示「裝置已收件」；這仍不代表家人已閱讀。</li>
-                  <li>收件人按下確認後會產生加密回條；原傳送者匯入回條後，才會顯示「已回覆本人確認」。</li>
+                  <li>兩部裝置都保持 App 在前景，按下「尋找附近家庭裝置」，可在沒有網際網路時嘗試直接交換加密現況。首次使用需允許本機網路。</li>
+                  <li>只有接收裝置完成驗證與儲存並回傳加密回條後，原裝置才顯示「已到達裝置」；這仍不代表家人已閱讀。</li>
+                  <li>收件人按下確認後會產生加密回條；原傳送者匯入回條後，才會顯示家人已確認。</li>
                 </ol>
               </div>
               <div class="lang-en">
@@ -396,9 +397,9 @@
                   <li>A recorded status first enters the local outbox. This does not mean family received it.</li>
                   <li>Choose “Hand off by QR or system share” to show a readable card and encrypted QR, or select Messages, AirDrop, or another system destination yourself.</li>
                   <li>A family recipient can scan the QR or paste the MORSEAID1 encrypted code from the shared message. The app verifies family, membership, signature, expiry, and replay.</li>
-                  <li>Keep MorseAid in the foreground on both devices and tap “Start family communication” or “Find nearby family devices” to attempt an encrypted exchange over nearby Wi‑Fi or Bluetooth without internet.</li>
-                  <li>The sender shows “Device received” only after the receiving device verifies, saves, and returns an encrypted receipt. This still does not mean a person read it.</li>
-                  <li>After the recipient confirms, the app creates an encrypted receipt. The original sender must import it before the app shows “Person confirmed.”</li>
+                  <li>Keep MorseAid in the foreground on both devices and tap “Find nearby family devices” to attempt a direct encrypted exchange without internet. Local Network permission is required the first time.</li>
+                  <li>The sender shows “Delivered to device” only after the receiving device verifies, saves, and returns an encrypted receipt. This still does not mean a person read it.</li>
+                  <li>After the recipient confirms, the app creates an encrypted receipt. The original sender must import it before the app shows person confirmation.</li>
                 </ol>
               </div>
               <p class="lang-zh"><strong>首發版範圍：</strong>一個家庭由本機與一台配對裝置組成。若要更換裝置，請先在成員列向左滑動並移除目前裝置，再重新配對。</p>
@@ -420,20 +421,32 @@
                 <article class="faq-item">
                   <h3 class="lang-zh">相機</h3>
                   <h3 class="lang-en">Camera</h3>
-                  <p class="lang-zh">只在你啟動影像接收器或 QR 掃描器時使用。影像只在記憶體中處理；不拍照、不錄影、也不上傳。</p>
-                  <p class="lang-en">Used only after you start the optical receiver or a QR scanner. Frames are processed in memory; no photo or video is saved or uploaded.</p>
+                  <p class="lang-zh">只在你啟動影像接收器時使用。畫面會轉換為中央區域亮度樣本；不拍照、不錄影、也不上傳。</p>
+                  <p class="lang-en">Used only after you start the optical receiver. Frames become center-region brightness samples; no photo or video is saved or uploaded.</p>
                 </article>
                 <article class="faq-item">
                   <h3 class="lang-zh">使用 App 期間的位置</h3>
                   <h3 class="lang-en">Location while using the app</h3>
-                  <p class="lang-zh">只有你在求救資料卡或家庭安全站按下位置按鈕後才會要求。MorseAid 不會要求「永遠允許」，也不會在背景追蹤位置。</p>
-                  <p class="lang-en">Requested only after you tap the location button on the emergency card or in Family Safety Station. MorseAid never asks for Always access or tracks location in the background.</p>
+                  <p class="lang-zh">只有你在求救資料卡按下位置按鈕後才會要求。MorseAid 不會要求「永遠允許」，也不會在背景追蹤位置。</p>
+                  <p class="lang-en">Requested only after you tap the location button on the emergency card. MorseAid never asks for Always access or tracks location in the background.</p>
                 </article>
                 <article class="faq-item">
-                  <h3 class="lang-zh">藍牙與本機網路</h3>
-                  <h3 class="lang-en">Bluetooth and Local Network</h3>
-                  <p class="lang-zh">只在你開始家庭通訊時使用，用來尋找並連線到附近已配對裝置；附近 Wi‑Fi 不可用時可退回純藍牙。App 離開前景後會停止搜尋與傳送。</p>
-                  <p class="lang-en">Used only after you start family communication to find and connect to nearby paired devices. It can fall back to Bluetooth when nearby Wi‑Fi is unavailable. Discovery and transfer stop when the app leaves the foreground.</p>
+                  <h3 class="lang-zh">本機網路</h3>
+                  <h3 class="lang-en">Local Network</h3>
+                  <p class="lang-zh">只在你開始附近家庭傳送時使用，用來尋找並連線到附近已配對的家庭裝置。離開前景後搜尋會停止。</p>
+                  <p class="lang-en">Used only after you start Nearby Family Transfer to find and connect to nearby paired-family devices. Searching stops when the app leaves the foreground.</p>
+                </article>
+                <article class="faq-item">
+                  <h3 class="lang-zh">藍牙</h3>
+                  <h3 class="lang-en">Bluetooth</h3>
+                  <p class="lang-zh">只在你主動開始純藍牙家庭傳送時，用來尋找附近已完成配對的家庭裝置並交換加密現況。停止傳送或離開前景後便停止搜尋。</p>
+                  <p class="lang-en">Used only after you start Bluetooth-only family transfer to find nearby paired-family devices and exchange encrypted statuses. Searching stops when transfer stops or the app leaves the foreground.</p>
+                </article>
+                <article class="faq-item">
+                  <h3 class="lang-zh">官方網頁連結</h3>
+                  <h3 class="lang-en">Official website links</h3>
+                  <p class="lang-zh">「設定」→「資料來源」中的按鈕會把公開 HTTPS 網址交給預設瀏覽器開啟。這不需要額外的 iOS 權限；MorseAid 不會在 App 內載入、記錄或分析你的瀏覽內容。外部網站會依各自的隱私權政策處理連線資料。</p>
+                  <p class="lang-en">Buttons under Settings → Sources hand a public HTTPS URL to your default browser. No additional iOS permission is required. MorseAid does not load, record, or analyze your browsing inside the app. External sites handle connection data under their own privacy policies.</p>
                 </article>
               </div>
               <p class="lang-zh">若要變更權限，請前往 iPhone「設定」→「隱私權與安全性」，或「設定」→「MorseAid」。</p>
@@ -447,7 +460,7 @@
                 <ul>
                   <li>MorseAid Pro 是一次買斷的非消耗型 App 內購買，不是訂閱。</li>
                   <li>前往 App 內「設定」→「MorseAid Pro」購買或使用「恢復購買」。</li>
-                  <li>實際價格由 App Store 依你的地區顯示；台灣參照售價為 NT$250。</li>
+                  <li>實際價格由 App Store 依你的地區顯示；台灣參照售價為 NT$290。</li>
                   <li>購買可透過 Apple 家人共享提供給家庭群組成員。</li>
                   <li>解鎖 30 天自適應訓練、自訂題庫與弱項分析、訊息模板與有限次演練播放清單。</li>
                   <li>解鎖完整本機訊號歷史、搜尋、註記、安全重播、CSV 匯出及 Signal Lab 診斷與調校。</li>
@@ -458,7 +471,7 @@
                 <ul>
                   <li>MorseAid Pro is a one-time, non-consumable in-app purchase, not a subscription.</li>
                   <li>Open Settings → MorseAid Pro in the app to buy or choose Restore Purchases.</li>
-                  <li>The App Store displays your localized price; the Taiwan reference price is NT$250.</li>
+                  <li>The App Store displays your localized price; the Taiwan reference price is NT$290.</li>
                   <li>Apple Family Sharing is enabled for this purchase.</li>
                   <li>Unlock the 30-day adaptive plan, custom question sets, weak-character analysis, reusable message templates, and finite practice playlists.</li>
                   <li>Unlock complete local signal history, search, notes, safe replay, CSV export, and Signal Lab diagnostics and tuning.</li>
@@ -561,6 +574,7 @@
           <a href="index.html">MorseAid</a>
           <a class="lang-zh" href="privacy.html">隱私權政策</a>
           <a class="lang-en" href="privacy.html">Privacy</a>
+          <a href="support-ja.html" lang="ja">日本語</a>
           <a href="https://github.com/piscesweilun/MorseAid-Support">GitHub</a>
         </nav>
       </div>

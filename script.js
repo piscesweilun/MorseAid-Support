@@ -1,9 +1,12 @@
 (() => {
   const body = document.body;
   const languageButtons = document.querySelectorAll("[data-language]");
-  const preferredLanguage = navigator.language.toLowerCase().startsWith("zh")
-    ? "zh"
-    : "en";
+  const browserLanguage = navigator.language.toLowerCase();
+  const preferredLanguage = body.dataset.lang === "ja"
+    ? "ja"
+    : browserLanguage.startsWith("zh")
+      ? "zh"
+      : "en";
   let currentLanguage = preferredLanguage;
 
   const messages = {
@@ -60,7 +63,7 @@
   function setLanguage(language) {
     currentLanguage = language;
     body.dataset.lang = language;
-    document.documentElement.lang = language === "zh" ? "zh-Hant" : "en";
+    document.documentElement.lang = language === "zh" ? "zh-Hant" : language;
 
     languageButtons.forEach((button) => {
       button.setAttribute(

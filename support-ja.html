@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="MorseAid 日本語サポート：使い方、権限、購入の復元、トラブルシューティング。"
+    />
+    <meta name="theme-color" content="#08273d" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'"
+    />
+    <title>MorseAid｜日本語サポート</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css?v=20260816-1" />
+    <script src="script.js" defer></script>
+  </head>
+  <body data-lang="ja">
+    <a class="skip-link" href="#main">メインコンテンツへ移動</a>
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand-link" href="index.html" aria-label="MorseAid ホーム">
+          <span class="signal-mark" aria-hidden="true">
+            <svg viewBox="0 0 68 48" fill="none">
+              <path d="M2 28h10c6 0 6-18 12-18s6 30 12 30" stroke="#13afbd" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="45" cy="26" r="4.5" fill="white" />
+              <path d="M55 26h11" stroke="white" stroke-width="7" stroke-linecap="round" />
+            </svg>
+          </span>
+          <span>MorseAid</span>
+        </a>
+        <nav class="site-nav" aria-label="主要ナビゲーション">
+          <a href="support-ja.html" aria-current="page">サポート</a>
+          <a href="privacy.html">プライバシー</a>
+        </nav>
+        <div class="language-toggle" aria-label="言語">
+          <a href="support.html" hreflang="zh-Hant">繁中</a>
+          <a href="support.html" hreflang="en">EN</a>
+          <a href="support-ja.html" aria-current="page">日本語</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="shell">
+          <p class="eyebrow">MorseAid サポート</p>
+          <h1>一つひとつの信号を、<br />もっと確かに。</h1>
+          <p class="lede">
+            通信が不安定なときの備え、家族安否ステーション、モールス練習、音・光の受信補助について、安全な使い方とトラブル対処を案内します。
+          </p>
+          <p class="meta-line">対象：MorseAid 1.1.0（iPhone・iPad）・更新日：2026年8月16日</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell content-layout">
+          <nav class="toc" aria-label="ページ内目次">
+            <strong>このページの内容</strong>
+            <a href="#start">はじめに</a>
+            <a href="#fallback">通信が制限されたとき</a>
+            <a href="#receivers">音・光の受信</a>
+            <a href="#training">練習</a>
+            <a href="#family">家族安否ステーション</a>
+            <a href="#permissions">権限</a>
+            <a href="#purchase">購入と復元</a>
+            <a href="#data">端末内データ</a>
+            <a href="#faq">よくある質問</a>
+            <a href="#contact">お問い合わせ</a>
+          </nav>
+
+          <div class="content-stack">
+            <section class="policy-section" id="start">
+              <h2>はじめに</h2>
+              <ol>
+                <li>初回起動時に安全上の注意を確認してください。センサーや信号送出が自動で始まることはありません。</li>
+                <li>ホームからSOS、受信、緊急情報カード、練習などを選びます。</li>
+                <li>送出前に、出力方法、モールス内容、速度、時間制限を確認します。</li>
+                <li>緊急時に公的な連絡手段を使える場合は、そちらを優先してください。</li>
+              </ol>
+              <div class="safety-note">
+                <span class="safety-icon" aria-hidden="true">!</span>
+                <div>
+                  <h3>重要な制限</h3>
+                  <p>MorseAidは緊急機関へ連絡せず、信号や家族メッセージの到達、救助を保証しません。公的な緊急連絡手段の代わりにはなりません。</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="policy-section" id="fallback">
+              <h2>通信が制限されたとき</h2>
+              <p>モバイルデータが使えなくても、音声通話やSMSが使える場合があります。日本では状況に応じて110、119、音声通話、SMS、災害用伝言サービスなどの公的手段を先に試してください。</p>
+              <div class="fact-list">
+                <article class="fact">
+                  <strong>事前に準備</strong>
+                  <p>公式の避難情報、家族の集合場所、端末同士のQRペアリング、近くの端末への転送、現金やモバイルバッテリーを平時に確認します。</p>
+                </article>
+                <article class="fact">
+                  <strong>SMS用安否カード</strong>
+                  <p>名前、状態、人数、時刻、メモを確認してから自分で宛先を選びます。正確な位置情報は初期状態では含まれません。SMS本文は暗号化されないため、機密情報を入力しないでください。</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="policy-section" id="receivers">
+              <h2>音・光の受信を改善する</h2>
+              <div class="fact-list">
+                <article class="fact">
+                  <strong>音の受信</strong>
+                  <p>安定した音源に近づき、会話、音楽、風、反響を避けます。静かな場所で調整してから、しきい値を少しずつ変更してください。</p>
+                </article>
+                <article class="fact">
+                  <strong>光の受信</strong>
+                  <p>光源を中央の検出範囲に保ち、端末を固定します。反射、自動露出の変化、ほかの点滅光を避けてください。</p>
+                </article>
+              </div>
+              <p>認識結果は補助情報です。元の短点・長点のリズムと照合し、行動する前に必ず自分で確認してください。</p>
+              <p><a href="support.html#signal-test">ブラウザ版の音・光テストを開く（繁体字中国語／英語）→</a></p>
+            </section>
+
+            <section class="policy-section" id="training">
+              <h2>初心者向け練習と30日間のProプラン</h2>
+              <div class="fact-list">
+                <article class="fact">
+                  <strong>無料：12の基本レッスン</strong>
+                  <p>SOSとよく使う文字から始め、音、点滅、認識、思い出す練習で基礎を作ります。モールス一覧から各文字を再生することもできます。</p>
+                </article>
+                <article class="fact">
+                  <strong>Pro：30日間の適応型練習</strong>
+                  <p>毎日の目標、苦手文字、連続日数、3・7・14・30日目の達成項目を表示します。練習データは端末内に保存されます。</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="policy-section" id="family">
+              <h2>家族安否ステーション</h2>
+              <ol>
+                <li>災害前に家族と対面し、双方のQRコードと6桁の安全コードを確認してペアリングします。</li>
+                <li>記録した安否は、まず端末内の送信待ち一覧に入ります。この時点では相手に届いていません。</li>
+                <li>QR、システム共有、近くのWi‑Fi、Bluetoothで署名・暗号化した安否を交換できます。</li>
+                <li>近くの端末への転送中は、両方の端末でMorseAidを前面に表示してください。</li>
+                <li>「端末に配信済み」と「本人が確認済み」は別の状態です。</li>
+              </ol>
+              <p><strong>範囲：</strong>現在は、この端末とペアリング済みの家族端末1台で構成されます。</p>
+            </section>
+
+            <section class="policy-section" id="permissions">
+              <h2>権限の用途</h2>
+              <div class="faq-list">
+                <article class="faq-item">
+                  <h3>マイク</h3>
+                  <p>音の受信を自分で開始したときだけ使用します。音声はメモリ内で処理され、録音、保存、アップロードされません。</p>
+                </article>
+                <article class="faq-item">
+                  <h3>カメラ</h3>
+                  <p>光の受信を自分で開始したときだけ使用します。映像は中央部分の明るさへ変換され、写真や動画として保存、アップロードされません。</p>
+                </article>
+                <article class="faq-item">
+                  <h3>使用中のみの位置情報</h3>
+                  <p>緊急情報カードで現在地の追加を選んだときだけ要求します。「常に許可」は要求せず、バックグラウンドで追跡しません。</p>
+                </article>
+                <article class="faq-item">
+                  <h3>ローカルネットワークとBluetooth</h3>
+                  <p>近くの家族端末への転送を自分で開始したときだけ、ペアリング済み端末の検索と暗号化した安否交換に使用します。停止またはバックグラウンド移行時に検索を終了します。</p>
+                </article>
+                <article class="faq-item">
+                  <h3>公式ウェブサイトへのリンク</h3>
+                  <p>「設定」→「情報源」のボタンは、公開HTTPS URLを標準ブラウザへ渡します。追加のiOS権限は不要です。MorseAidはアプリ内で閲覧内容を読み込み、記録、分析しません。接続情報は各外部サイトのプライバシーポリシーに従って処理されます。</p>
+                </article>
+              </div>
+              <p>権限を変更するには、iPhone／iPadの「設定」→「プライバシーとセキュリティ」、または「設定」→「MorseAid」を開いてください。</p>
+            </section>
+
+            <section class="policy-section" id="purchase">
+              <h2>MorseAid Proの購入と復元</h2>
+              <ul>
+                <li>MorseAid Proは買い切りの非消耗型App内課金で、サブスクリプションではありません。</li>
+                <li>アプリの「設定」→「MorseAid Pro」から購入または「購入を復元」を選びます。</li>
+                <li>価格は地域に応じてApp Storeが表示します。</li>
+                <li>Appleのファミリー共有に対応しています。</li>
+                <li>決済、返金、取引履歴、請求はAppleが処理します。</li>
+              </ul>
+            </section>
+
+            <section class="policy-section" id="data">
+              <h2>端末内データの管理と削除</h2>
+              <p>緊急情報カード、練習進捗、テンプレート、家族安否ステーション、設定、信号履歴は端末内に保存されます。履歴はアプリ内で個別または一括削除でき、アプリを削除するとアプリコンテナ内のデータも削除されます。iOS Keychainの端末秘密鍵やペアリング鍵は残る場合があります。ペアリングを先に解除するには、メンバーを左へスワイプして削除してからアプリを削除してください。</p>
+              <p><a href="privacy.html">プライバシーポリシーを開く（繁体字中国語／英語）→</a></p>
+            </section>
+
+            <section class="policy-section" id="faq">
+              <h2>よくある質問</h2>
+              <div class="faq-list">
+                <article class="faq-item">
+                  <h3>緊急地震速報やJアラートを受信しますか？</h3>
+                  <p>受信しません。MorseAidは緊急機関への通報、オンライン救援要請、Jアラート受信を行いません。</p>
+                </article>
+                <article class="faq-item">
+                  <h3>インターネットなしでも使えますか？</h3>
+                  <p>無料の基本機能はオフラインで使えます。購入、購入の復元、App Storeの商品情報を初めて取得するときはAppleのサービスが必要です。</p>
+                </article>
+                <article class="faq-item">
+                  <h3>カメラやマイクを開始できません</h3>
+                  <p>端末の設定で権限を確認し、ほかのアプリがセンサーを使用していないことを確かめてからMorseAidを再起動してください。</p>
+                </article>
+                <article class="faq-item">
+                  <h3>緊急情報カードのQRコードは暗号化されていますか？</h3>
+                  <p>暗号化されません。見える位置にあるQRコードはほかのカメラでも読み取れます。任意の医療情報は初期状態では除外されます。表示前に内容を確認してください。</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="policy-section" id="contact">
+              <div class="contact-panel">
+                <h2>解決しない場合</h2>
+                <p>GitHubのサポート窓口で、MorseAidのバージョン、端末モデル、iOS／iPadOSのバージョン、再現手順、表示されたメッセージをお知らせください。氏名、位置情報、医療情報、Apple ID、購入明細は公開しないでください。</p>
+                <div class="hero-actions">
+                  <a class="button button-primary" href="https://github.com/piscesweilun/MorseAid-Support/issues/new?template=support.yml">サポート問題を作成</a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-shell">
+        <span>© <span data-year>2026</span> <a href="https://github.com/piscesweilun">PiscesStudio</a> · MorseAid</span>
+        <nav aria-label="フッター">
+          <a href="index.html">MorseAid</a>
+          <a href="support.html">繁中／EN</a>
+          <a href="https://github.com/piscesweilun/MorseAid-Support">GitHub</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

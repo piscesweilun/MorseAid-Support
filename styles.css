@@ -119,6 +119,7 @@ a {
 }
 
 .site-nav a,
+.language-toggle a,
 .language-toggle button {
   min-height: 42px;
   padding: 9px 13px;
@@ -134,6 +135,8 @@ a {
 
 .site-nav a:hover,
 .site-nav a[aria-current="page"],
+.language-toggle a:hover,
+.language-toggle a[aria-current="page"],
 .language-toggle button:hover,
 .language-toggle button[aria-pressed="true"] {
   color: var(--ink);
@@ -908,7 +911,11 @@ button.button:disabled {
 }
 
 [data-lang="en"] .lang-zh,
-[data-lang="zh"] .lang-en {
+[data-lang="en"] .lang-ja,
+[data-lang="zh"] .lang-en,
+[data-lang="zh"] .lang-ja,
+[data-lang="ja"] .lang-zh,
+[data-lang="ja"] .lang-en {
   display: none !important;
 }
 
@@ -975,6 +982,8 @@ button.button:disabled {
 @media (max-width: 560px) {
   .nav-shell {
     width: min(calc(100% - 20px), var(--content));
+    flex-wrap: wrap;
+    padding-block: 8px;
   }
 
   .signal-mark {
@@ -982,17 +991,30 @@ button.button:disabled {
     height: 40px;
   }
 
+  .site-nav {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
+    border-top: 1px solid var(--line);
+  }
+
   .site-nav a {
+    min-height: 36px;
+    padding-block: 6px;
     font-size: 0.9rem;
   }
 
   .language-toggle {
+    margin-left: auto;
     padding-left: 3px;
   }
 
+  .language-toggle a,
   .language-toggle button {
-    padding-inline: 8px;
-    font-size: 0.85rem;
+    min-height: 36px;
+    padding: 6px 7px;
+    font-size: 0.78rem;
   }
 
   .shell {

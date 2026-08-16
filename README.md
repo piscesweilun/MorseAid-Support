@@ -5,6 +5,7 @@ MorseAid 摩斯安訊的官方支援與隱私網站。本目錄是公開網站�
 - 儲存庫：https://github.com/piscesweilun/MorseAid-Support
 - 首頁：https://piscesweilun.github.io/MorseAid-Support/
 - 支援：https://piscesweilun.github.io/MorseAid-Support/support.html
+- 日文支援：https://piscesweilun.github.io/MorseAid-Support/support-ja.html
 - 隱私：https://piscesweilun.github.io/MorseAid-Support/privacy.html
 
 網站不使用 Cookie、分析、廣告、追蹤像素、第三方字型或第三方腳本。
