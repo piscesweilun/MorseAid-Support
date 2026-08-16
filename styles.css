@@ -210,6 +210,10 @@ h1 {
   font-size: clamp(2.4rem, 6vw, 4.7rem);
 }
 
+.page-hero .support-ja-title {
+  font-size: clamp(2.4rem, 5.1vw, 4rem);
+}
+
 h2 {
   margin: 0 0 18px;
   font-size: clamp(1.8rem, 4vw, 3rem);
@@ -233,6 +237,28 @@ h3 {
   margin: 24px 0 0;
   color: var(--muted);
   font-size: clamp(1.05rem, 2vw, 1.28rem);
+}
+
+.release-highlight {
+  max-width: 760px;
+  margin-top: 28px;
+  padding: 18px 20px;
+  border: 1px solid rgba(8, 164, 181, 0.32);
+  border-left: 5px solid var(--brand-bright);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 12px 36px rgba(8, 39, 61, 0.08);
+}
+
+.release-highlight strong {
+  display: block;
+  color: var(--brand);
+  font-size: 1.05rem;
+}
+
+.release-highlight p {
+  margin: 5px 0 0;
+  color: var(--ink);
 }
 
 .hero-actions {
